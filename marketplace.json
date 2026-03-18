@@ -1,0 +1,12 @@
+{
+  "name": "bss-skills",
+  "description": "BSS Compute AI Skills - Internal tools for FPT Cloud BSS team",
+  "author": "NguyenAnhDuc",
+  "plugins": [
+    {
+      "name": "docsmith",
+      "description": "AI-driven documentation workflow (PRC-010) - Doc to code pipeline",
+      "path": "plugins/docsmith/SKILL.md"
+    }
+  ]
+}
