@@ -1,12 +1,21 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "bss-skills",
   "description": "BSS Compute AI Skills - Internal tools for FPT Cloud BSS team",
-  "author": "NguyenAnhDuc",
+  "owner": {
+    "name": "NguyenAnhDuc",
+    "email": "ducna01120@gmail.com"
+  },
   "plugins": [
     {
       "name": "docsmith",
       "description": "AI-driven documentation workflow (PRC-010) - Doc to code pipeline",
-      "path": "plugins/docsmith/SKILL.md"
+      "author": {
+        "name": "NguyenAnhDuc",
+        "email": "ducna01120@gmail.com"
+      },
+      "source": "./plugins/docsmith",
+      "category": "development"
     }
   ]
 }
