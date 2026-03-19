@@ -36,10 +36,10 @@ Claude Code (recommended):
 ### Usage
 
 ```
-/fpt-smartcloud/docsmith help              # Show all commands
-/fpt-smartcloud/docsmith start MyProduct   # Begin full workflow
-/fpt-smartcloud/docsmith draft APIEndpoint # Quick draft only
-/fpt-smartcloud/docsmith verify MyProduct  # Run quality checks
+/fci/docsmith help              # Show all commands
+/fci/docsmith start MyProduct   # Begin full workflow
+/fci/docsmith draft APIEndpoint # Quick draft only
+/fci/docsmith verify MyProduct  # Run quality checks
 ```
 
 ---

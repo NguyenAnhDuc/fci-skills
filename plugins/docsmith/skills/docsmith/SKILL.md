@@ -1,10 +1,10 @@
 ---
-name: fpt-smartcloud/docsmith
+name: fci/docsmith
 version: 1.0.0
 description: "Create documentation following PRC-010 process. Use when asked to create, draft, or plan documentation for a product or project. Guides through audience analysis, documentation planning, sitemap creation, UX content standards, drafting, self-review, and product walkthrough."
-author: fpt-smartcloud
+author: fci
 license: MIT
-repository: https://github.com/fpt-smartcloud/docsmith
+repository: https://github.com/fci/docsmith
 keywords:
   - documentation
   - technical-writing

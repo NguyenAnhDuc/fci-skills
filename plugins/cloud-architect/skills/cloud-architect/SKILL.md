@@ -1,5 +1,5 @@
 ---
-name: fpt-smartcloud/cloud-architect
+name: fci/cloud-architect
 description: Designs cloud architectures, creates migration plans, generates cost optimization recommendations, and produces disaster recovery strategies across AWS, Azure, and GCP. Use when designing cloud architectures, planning migrations, or optimizing multi-cloud deployments.
 license: MIT
 metadata:

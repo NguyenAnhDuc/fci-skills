@@ -12,8 +12,8 @@ AI Skills mono-repo for FPT Cloud BSS team. Claude Code plugins for documentatio
 
 | Skill | Command | Description |
 |-------|---------|-------------|
-| [Docsmith](plugins/docsmith/) | `/fpt-smartcloud/docsmith` | AI-guided documentation workflow (PRC-010) |
-| [Cloud Architect](plugins/cloud-architect/) | `/fpt-smartcloud/cloud-architect` | Cloud architecture design across AWS/Azure/GCP |
+| [Docsmith](plugins/docsmith/) | `/fci/docsmith` | AI-guided documentation workflow (PRC-010) |
+| [Cloud Architect](plugins/cloud-architect/) | `/fci/cloud-architect` | Cloud architecture design across AWS/Azure/GCP |
 
 ---
 
@@ -48,9 +48,9 @@ claude plugin update cloud-architect@bss-skills
 PRC-010: Systematic documentation workflow from audience analysis to publication.
 
 ```
-/fpt-smartcloud/docsmith start PaymentAPI    # Full workflow
-/fpt-smartcloud/docsmith draft UserManagement # Quick draft
-/fpt-smartcloud/docsmith verify MyProduct     # Quality checks
+/fci/docsmith start PaymentAPI    # Full workflow
+/fci/docsmith draft UserManagement # Quick draft
+/fci/docsmith verify MyProduct     # Quality checks
 ```
 
 **Workflow:**
@@ -58,25 +58,25 @@ PRC-010: Systematic documentation workflow from audience analysis to publication
 audience → plan → review-plan → sitemap → voice → draft → edit → walkthrough → peer-review → incorporate → publish
 ```
 
-| Command | Alias | Owner | Description |
-|---------|-------|-------|-------------|
-| help | h | — | Show command reference |
-| start | — | — | Begin full process |
-| audience | aud | 👤 Human | Define audience & goals |
-| plan | pl | 🤖 AI | Create doc plan |
-| review-plan | rp | 👤 Human | Review gate |
-| sitemap | sm | 🤖 AI | Create structure |
-| voice | vc | 🤖 AI | UX content standards |
-| draft | dr | 🤖 AI | Write docs |
-| edit | ed | 🤖 AI | Self-review (5 passes) |
-| walkthrough | wt | 🤖 AI | Test on product |
-| validate | val | 🤖 AI | Re-run tests only |
-| test | t | 🤖 AI | Create test cases |
-| verify | vf | 🤖 AI | Run all checks |
-| peer-review | pr | 👤 Human | Peer review |
-| tech-review | tr | 👤 Human | Technical review |
-| incorporate | inc | 🤖 AI | Integrate feedback |
-| publish | pub | 👤 Human | Final approval |
+| Command | Alias | Owner | Description | Example |
+|---------|-------|-------|-------------|---------|
+| help | h | — | Show command reference | /fci/docsmith help |
+| start | — | — | Begin full process | /fci/docsmith start MyProduct |
+| audience | aud | 👤 Human | Define audience & goals | /fci/docsmith aud PaymentAPI |
+| plan | pl | 🤖 AI | Create doc plan | /fci/docsmith plan PaymentAPI |
+| review-plan | rp | 👤 Human | Review gate | /fci/docsmith rp PaymentAPI |
+| sitemap | sm | 🤖 AI | Create structure | /fci/docsmith sm PaymentAPI |
+| voice | vc | 🤖 AI | UX content standards | /fci/docsmith vc PaymentAPI |
+| draft | dr | 🤖 AI | Write docs | /fci/docsmith draft PaymentAPI |
+| edit | ed | 🤖 AI | Self-review (5 passes) | /fci/docsmith ed PaymentAPI |
+| walkthrough | wt | 🤖 AI | Test on product | /fci/docsmith wt PaymentAPI |
+| validate | val | 🤖 AI | Re-run tests only | /fci/docsmith val PaymentAPI |
+| test | t | 🤖 AI | Create test cases | /fci/docsmith test PaymentAPI |
+| verify | vf | 🤖 AI | Run all checks | /fci/docsmith verify PaymentAPI |
+| peer-review | pr | 👤 Human | Peer review | /fci/docsmith pr PaymentAPI |
+| tech-review | tr | 👤 Human | Technical review | /fci/docsmith tr PaymentAPI |
+| incorporate | inc | 🤖 AI | Integrate feedback | /fci/docsmith inc PaymentAPI |
+| publish | pub | 👤 Human | Final approval | /fci/docsmith pub PaymentAPI |
 
 **Output Structure:**
 ```
@@ -98,10 +98,6 @@ docs/
 
 Design cloud architectures, migration plans, cost optimization across AWS/Azure/GCP.
 
-```
-/fpt-smartcloud/cloud-architect             # Start architecture design
-```
-
 **Core Workflow:**
 ```
 Discovery → Design → Security → Cost Model → Migration → Operate
@@ -121,74 +117,19 @@ Discovery → Design → Security → Cost Model → Migration → Operate
 
 ---
 
-## 🏗️ Team Deployment
-
-For BSS/Engineering teams:
-
-1. **Claude Code (recommended):**
-   ```
-   claude plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
-   claude plugin install docsmith@bss-skills
-   ```
-
-2. **Cursor / Other agents:**
-   ```bash
-   cd /path/to/your-project
-   mkdir -p .cursor/agents
-   git clone https://github.com/NguyenAnhDuc/bss-skills.git .cursor/agents/bss-skills
-   git add .cursor/
-   git commit -m "Add BSS Skills"
-   ```
-
-3. **Adding new skills:**
-   ```
-   plugins/<skill-name>/
-   ├── skills/<skill-name>/
-   │   ├── SKILL.md
-   │   └── references/
-   └── README.md
-   ```
-   Update `.claude-plugin/marketplace.json` and push.
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repo
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
-
----
-
 ## 📄 License
 
 MIT License
 
----
-
 ## 👤 Author
 
-**Duc Nguyen**
-- GitHub: [@NguyenAnhDuc](https://github.com/NguyenAnhDuc)
-- Email: nguyenanhduc01120@gmail.com
+**Duc Nguyen** — [@NguyenAnhDuc](https://github.com/NguyenAnhDuc)
 
 Based on FPT Smart Cloud internal standards.
 
 ---
 
-## 🐛 Support
-
-- Issues: [GitHub Issues](https://github.com/NguyenAnhDuc/bss-skills/issues)
-- Discussions: [GitHub Discussions](https://github.com/NguyenAnhDuc/bss-skills/discussions)
-
----
-
 ## ⭐ Star History
-
-If you find BSS Skills useful, please consider starring the repo!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=NguyenAnhDuc/bss-skills&type=Date)](https://star-history.com/#NguyenAnhDuc/bss-skills&Date)
 
