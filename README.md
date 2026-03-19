@@ -123,16 +123,4 @@ MIT License
 
 ## 👤 Author
 
-**Duc Nguyen** — [@NguyenAnhDuc](https://github.com/NguyenAnhDuc)
-
-Based on FPT Smart Cloud internal standards.
-
----
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=NguyenAnhDuc/bss-skills&type=Date)](https://star-history.com/#NguyenAnhDuc/bss-skills&Date)
-
----
-
-Built with ❤️ for better documentation & cloud architecture
+**BSS Team** — FPT Smart Cloud
