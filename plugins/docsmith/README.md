@@ -36,8 +36,8 @@ Claude Code (recommended):
 ### Usage
 
 ```
-/fpt-smartcloud/docsmith help           # Show all commands
-/fpt-smartcloud/docsmith start MyProduct # Begin full workflow
+/fpt-smartcloud/docsmith help              # Show all commands
+/fpt-smartcloud/docsmith start MyProduct   # Begin full workflow
 /fpt-smartcloud/docsmith draft APIEndpoint # Quick draft only
 /fpt-smartcloud/docsmith verify MyProduct  # Run quality checks
 ```
@@ -69,42 +69,160 @@ audience → plan → review-plan → sitemap → voice → draft → edit → w
 
 ## 📖 Commands Reference
 
-| Command | Alias | Owner | Description |
-|---------|-------|-------|-------------|
-| `help` | `h` | — | Show command reference |
-| `start` | — | — | Begin full process |
-| `audience` | `aud` | Human | Define audience and goals |
-| `plan` | `pl` | AI | Create documentation plan |
-| `review-plan` | `rp` | Human | Review and approve plan |
-| `sitemap` | `sm` | AI | Create sitemap |
-| `voice` | `vc` | AI | UX content standards |
-| `draft` | `dr` | AI | Draft documentation |
-| `edit` | `ed` | AI | Self-review edit (5 passes) |
-| `walkthrough` | `wt` | AI | Product walkthrough |
-| `validate` | `val` | AI | Run test cases only |
-| `test` | `t` | AI | Create/update test cases |
-| `verify` | `vf` | AI | Run all verification checks |
-| `peer-review` | `pr` | Human | Peer review |
-| `tech-review` | `tr` | Human | Technical review |
-| `incorporate` | `inc` | AI | Incorporate feedback |
-| `publish` | `pub` | Human | Approve and publish |
+| Command | Alias | Description | Example |
+|---------|-------|-------------|---------|
+| help | h | Show command reference | /docsmith help |
+| start | — | Begin full process | /docsmith start MyProduct |
+| audience | aud | Define audience & goals | /docsmith aud PaymentAPI |
+| plan | pl | AI creates doc plan | /docsmith plan PaymentAPI |
+| review-plan | rp | Human review gate | /docsmith rp PaymentAPI |
+| sitemap | sm | AI creates structure | /docsmith sm PaymentAPI |
+| voice | vc | UX content standards | /docsmith vc PaymentAPI |
+| draft | dr | AI writes docs | /docsmith draft PaymentAPI |
+| edit | ed | AI self-review (5 passes) | /docsmith ed PaymentAPI |
+| walkthrough | wt | Test on real product | /docsmith wt PaymentAPI |
+| validate | val | Re-run tests only | /docsmith val PaymentAPI |
+| test | t | Create test cases | /docsmith test PaymentAPI |
+| verify | vf | Run all checks | /docsmith verify PaymentAPI |
+| peer-review | pr | Human peer review | /docsmith pr PaymentAPI |
+| tech-review | tr | Technical review | /docsmith tr PaymentAPI |
+| incorporate | inc | Integrate feedback | /docsmith inc PaymentAPI |
+| publish | pub | Final approval | /docsmith pub PaymentAPI |
 
 ---
 
-## 📁 Templates Included
+## 💡 Examples
 
-- Audience Profile Template
-- Content Type Templates
-- Documentation Plan Template
-- Traceability Matrix Template
-- UX Content Scorecard Template
-- UX Text Patterns Template
-- Voice Chart Template
-- Walkthrough Test Case Template
-- Walkthrough Test Execution Template
+### Document new API
+
+```
+/docsmith start PaymentAPI
+# Follow prompts: audience → plan → draft → walkthrough → publish
+```
+
+### Update existing docs
+
+```
+/docsmith draft UserManagement
+/docsmith verify UserManagement
+```
+
+### Quality check specific files
+
+```
+/docsmith verify MyProduct docs/drafts/getting-started.md
+/docsmith verify MyProduct docs/drafts/api-*.md
+```
+
+---
+
+## 📂 Output Structure
+
+```
+docs/
+├── plan/
+│   ├── audience-profile.md
+│   ├── documentation-plan.md
+│   └── traceability-matrix.md
+├── standards/
+│   ├── voice-chart.md
+│   ├── ux-text-patterns.md
+│   └── ux-content-scorecard.md
+├── drafts/
+│   ├── getting-started.md
+│   ├── tutorials/
+│   ├── reference/
+│   └── api/
+├── walkthrough/
+│   ├── test-cases.md
+│   └── test-execution.md
+└── images/
+    └── walkthrough/
+```
+
+---
+
+## 🎨 Templates Included
+
+- ✅ Audience Profile
+- ✅ Documentation Plan
+- ✅ Traceability Matrix
+- ✅ Voice Chart
+- ✅ UX Text Patterns
+- ✅ UX Content Scorecard
+- ✅ Walkthrough Test Cases
+- ✅ Content Type Templates:
+  - Getting Started
+  - Tutorials
+  - How-To Guides
+  - Reference
+  - API Documentation
+  - Troubleshooting
+
+---
+
+## 🛠️ Cross-Platform Support
+
+| Platform | Installation | Trigger | Auto-invoke |
+|----------|--------------|---------|-------------|
+| Claude Code | Plugin marketplace | /docsmith | ❌ Disabled |
+
+---
+
+## 🏗️ Team Deployment
+
+For BSS/Engineering teams:
+
+1. Add to project repo:
+   ```
+   cd /path/to/your-project
+   mkdir -p .cursor/agents
+   git clone https://github.com/NguyenAnhDuc/bss-skills.git .cursor/agents/bss-skills
+   git add .cursor/
+   git commit -m "Add BSS Skills (DocSmith + more)"
+   ```
+
+2. Team members pull:
+   ```
+   git pull
+   # Cursor auto-detects agent
+   ```
+
+3. Usage:
+   ```
+   "Use docsmith to document the new OAuth2 flow"
+   ```
+
+---
+
+## 📚 Documentation
+
+- Process Reference: [SKILL.md](skills/docsmith/SKILL.md)
+- Tools Reference: [skills/docsmith/tools-reference.md](skills/docsmith/tools-reference.md)
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Please:
+1. Fork the repo
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
 
 ---
 
 ## 📄 License
 
-MIT
+MIT License
+
+---
+
+## 👤 Author
+
+**Duc Nguyen**
+- GitHub: [@NguyenAnhDuc](https://github.com/NguyenAnhDuc)
+- Email: nguyenanhduc01120@gmail.com
+
+Based on FPT Smart Cloud PRC-010 documentation standard.
