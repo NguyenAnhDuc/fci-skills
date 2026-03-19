@@ -25,8 +25,6 @@ Based on industry best practices from *Docs for Developers* (Bhatti et al., 2021
 
 ### Installation
 
-Claude Code (recommended):
-
 ```
 /plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
 /plugin install docsmith@bss-skills
@@ -71,23 +69,23 @@ audience → plan → review-plan → sitemap → voice → draft → edit → w
 
 | Command | Alias | Description | Example |
 |---------|-------|-------------|---------|
-| help | h | Show command reference | /docsmith help |
-| start | — | Begin full process | /docsmith start MyProduct |
-| audience | aud | Define audience & goals | /docsmith aud PaymentAPI |
-| plan | pl | AI creates doc plan | /docsmith plan PaymentAPI |
-| review-plan | rp | Human review gate | /docsmith rp PaymentAPI |
-| sitemap | sm | AI creates structure | /docsmith sm PaymentAPI |
-| voice | vc | UX content standards | /docsmith vc PaymentAPI |
-| draft | dr | AI writes docs | /docsmith draft PaymentAPI |
-| edit | ed | AI self-review (5 passes) | /docsmith ed PaymentAPI |
-| walkthrough | wt | Test on real product | /docsmith wt PaymentAPI |
-| validate | val | Re-run tests only | /docsmith val PaymentAPI |
-| test | t | Create test cases | /docsmith test PaymentAPI |
-| verify | vf | Run all checks | /docsmith verify PaymentAPI |
-| peer-review | pr | Human peer review | /docsmith pr PaymentAPI |
-| tech-review | tr | Technical review | /docsmith tr PaymentAPI |
-| incorporate | inc | Integrate feedback | /docsmith inc PaymentAPI |
-| publish | pub | Final approval | /docsmith pub PaymentAPI |
+| help | h | Show command reference | /fci/docsmith help |
+| start | — | Begin full process | /fci/docsmith start MyProduct |
+| audience | aud | Define audience & goals | /fci/docsmith aud PaymentAPI |
+| plan | pl | AI creates doc plan | /fci/docsmith plan PaymentAPI |
+| review-plan | rp | Human review gate | /fci/docsmith rp PaymentAPI |
+| sitemap | sm | AI creates structure | /fci/docsmith sm PaymentAPI |
+| voice | vc | UX content standards | /fci/docsmith vc PaymentAPI |
+| draft | dr | AI writes docs | /fci/docsmith draft PaymentAPI |
+| edit | ed | AI self-review (5 passes) | /fci/docsmith ed PaymentAPI |
+| walkthrough | wt | Test on real product | /fci/docsmith wt PaymentAPI |
+| validate | val | Re-run tests only | /fci/docsmith val PaymentAPI |
+| test | t | Create test cases | /fci/docsmith test PaymentAPI |
+| verify | vf | Run all checks | /fci/docsmith verify PaymentAPI |
+| peer-review | pr | Human peer review | /fci/docsmith pr PaymentAPI |
+| tech-review | tr | Technical review | /fci/docsmith tr PaymentAPI |
+| incorporate | inc | Integrate feedback | /fci/docsmith inc PaymentAPI |
+| publish | pub | Final approval | /fci/docsmith pub PaymentAPI |
 
 ---
 
@@ -96,22 +94,22 @@ audience → plan → review-plan → sitemap → voice → draft → edit → w
 ### Document new API
 
 ```
-/docsmith start PaymentAPI
+/fci/docsmith start PaymentAPI
 # Follow prompts: audience → plan → draft → walkthrough → publish
 ```
 
 ### Update existing docs
 
 ```
-/docsmith draft UserManagement
-/docsmith verify UserManagement
+/fci/docsmith draft UserManagement
+/fci/docsmith verify UserManagement
 ```
 
 ### Quality check specific files
 
 ```
-/docsmith verify MyProduct docs/drafts/getting-started.md
-/docsmith verify MyProduct docs/drafts/api-*.md
+/fci/docsmith verify MyProduct docs/drafts/getting-started.md
+/fci/docsmith verify MyProduct docs/drafts/api-*.md
 ```
 
 ---
@@ -161,55 +159,10 @@ docs/
 
 ---
 
-## 🛠️ Cross-Platform Support
+## 📚 References
 
-| Platform | Installation | Trigger | Auto-invoke |
-|----------|--------------|---------|-------------|
-| Claude Code | Plugin marketplace | /docsmith | ❌ Disabled |
-
----
-
-## 🏗️ Team Deployment
-
-For BSS/Engineering teams:
-
-1. Add to project repo:
-   ```
-   cd /path/to/your-project
-   mkdir -p .cursor/agents
-   git clone https://github.com/NguyenAnhDuc/bss-skills.git .cursor/agents/bss-skills
-   git add .cursor/
-   git commit -m "Add BSS Skills (DocSmith + more)"
-   ```
-
-2. Team members pull:
-   ```
-   git pull
-   # Cursor auto-detects agent
-   ```
-
-3. Usage:
-   ```
-   "Use docsmith to document the new OAuth2 flow"
-   ```
-
----
-
-## 📚 Documentation
-
-- Process Reference: [SKILL.md](skills/docsmith/SKILL.md)
-- Tools Reference: [skills/docsmith/tools-reference.md](skills/docsmith/tools-reference.md)
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repo
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
+- [SKILL.md](skills/docsmith/SKILL.md) — Full process reference
+- [tools-reference.md](skills/docsmith/tools-reference.md) — Tools & utilities
 
 ---
 
@@ -217,12 +170,6 @@ Contributions welcome! Please:
 
 MIT License
 
----
-
 ## 👤 Author
 
-**Duc Nguyen**
-- GitHub: [@NguyenAnhDuc](https://github.com/NguyenAnhDuc)
-- Email: nguyenanhduc01120@gmail.com
-
-Based on FPT Smart Cloud PRC-010 documentation standard.
+**BSS Team** — FPT Smart Cloud
