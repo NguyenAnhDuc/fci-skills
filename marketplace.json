@@ -26,6 +26,16 @@
       },
       "source": "./plugins/cloud-architect",
       "category": "infrastructure"
+    },
+    {
+      "name": "apply-v2",
+      "description": "Migrate Material-UI v1 pages to the FCI Design System v2 using useLayout and isApplyingV2",
+      "author": {
+        "name": "NguyenAnhDuc",
+        "email": "ducna01120@gmail.com"
+      },
+      "source": "./plugins/apply-v2",
+      "category": "development"
     }
   ]
 }

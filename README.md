@@ -2,9 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Marketplace-purple.svg)](https://github.com/NguyenAnhDuc/bss-skills)
-[![Skills](https://img.shields.io/badge/skills-2-green.svg)](https://github.com/NguyenAnhDuc/bss-skills)
+[![Skills](https://img.shields.io/badge/skills-3-green.svg)](https://github.com/NguyenAnhDuc/bss-skills)
 
-AI Skills mono-repo for FPT Cloud BSS team. Claude Code plugins for documentation, cloud architecture, and more.
+AI Skills mono-repo for FPT Cloud BSS team. Claude Code plugins for documentation, cloud architecture, UI migration, and more.
 
 ---
 
@@ -14,6 +14,7 @@ AI Skills mono-repo for FPT Cloud BSS team. Claude Code plugins for documentatio
 |-------|---------|-------------|
 | [Docsmith](plugins/docsmith/) | `/fci/docsmith` | AI-guided documentation workflow (PRC-010) |
 | [Cloud Architect](plugins/cloud-architect/) | `/fci/cloud-architect` | Cloud architecture design across AWS/Azure/GCP |
+| [Apply V2](plugins/apply-v2/) | `/fci/apply-v2` | Migrate Material-UI v1 pages to FCI Design System v2 |
 
 ---
 
@@ -28,6 +29,7 @@ claude plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
 # Install skills
 claude plugin install docsmith@bss-skills
 claude plugin install cloud-architect@bss-skills
+claude plugin install apply-v2@bss-skills
 
 # Reload
 /reload-plugins
@@ -39,6 +41,7 @@ claude plugin install cloud-architect@bss-skills
 claude plugin marketplace update bss-skills
 claude plugin update docsmith@bss-skills
 claude plugin update cloud-architect@bss-skills
+claude plugin update apply-v2@bss-skills
 ```
 
 ---
@@ -114,6 +117,25 @@ Discovery → Design → Security → Cost Model → Migration → Operate
 - 🛡️ Disaster recovery (RTO/RPO)
 
 📖 [Full Cloud Architect SKILL.md](plugins/cloud-architect/skills/cloud-architect/SKILL.md)
+
+---
+
+## 🎨 Apply V2
+
+Migrate Material-UI v1 pages to the FCI Design System v2 using the runtime layout switching model.
+
+**Core Coverage:**
+```
+V2_READY_PAGES → useLayout() → PageWrapper → tables/forms/dialogs/tutorials
+```
+
+**Key Capabilities:**
+- 🔀 Dual-runtime V1/V2 migration model
+- 🧩 Versioned UI components via `useLayout().components`
+- 📋 Migration checklist + pitfalls
+- 📚 Page-type references for list/detail/form/dialog work
+
+📖 [Full Apply V2 README](plugins/apply-v2/README.md)
 
 ---
 
