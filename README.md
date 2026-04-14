@@ -1,41 +1,26 @@
 # BSS Skills
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-Marketplace-purple.svg)](https://github.com/NguyenAnhDuc/bss-skills)
-[![Skills](https://img.shields.io/badge/skills-3-green.svg)](https://github.com/NguyenAnhDuc/bss-skills)
+Skills repo for the FPT Cloud BSS team.
 
-AI Skills mono-repo for FPT Cloud BSS team. Claude Code plugins for documentation, cloud architecture, UI migration, and more.
+## Available skills
 
----
-
-## 📦 Skills
-
-| Skill | Command | Description |
-|-------|---------|-------------|
-| [Docsmith](plugins/docsmith/) | `/fci/docsmith` | AI-guided documentation workflow (PRC-010) |
-| [Cloud Architect](plugins/cloud-architect/) | `/fci/cloud-architect` | Cloud architecture design across AWS/Azure/GCP |
+| Skill | Command | Purpose |
+| --- | --- | --- |
+| [Docsmith](plugins/docsmith/) | `/fci/docsmith` | Documentation workflow |
+| [Cloud Architect](plugins/cloud-architect/) | `/fci/cloud-architect` | Cloud architecture and migration planning |
 | [Apply V2](plugins/apply-v2/) | `/fci/apply-v2` | Migrate Material-UI v1 pages to FCI Design System v2 |
 
----
-
-## 🚀 Quick Start
-
-### Installation
+## Install
 
 ```bash
-# Add marketplace (one time)
 claude plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
-
-# Install skills
 claude plugin install docsmith@bss-skills
 claude plugin install cloud-architect@bss-skills
 claude plugin install apply-v2@bss-skills
-
-# Reload
 /reload-plugins
 ```
 
-### Update
+## Update
 
 ```bash
 claude plugin marketplace update bss-skills
@@ -44,105 +29,12 @@ claude plugin update cloud-architect@bss-skills
 claude plugin update apply-v2@bss-skills
 ```
 
----
+## Notes
 
-## 🤖 Docsmith
+- `docsmith` is for structured documentation work.
+- `cloud-architect` is for cloud design, migration, and cost/security planning.
+- `apply-v2` is for UI migration work in the FPT Cloud console where v1 and v2 coexist at runtime.
 
-PRC-010: Systematic documentation workflow from audience analysis to publication.
+## License
 
-```
-/fci/docsmith start PaymentAPI    # Full workflow
-/fci/docsmith draft UserManagement # Quick draft
-/fci/docsmith verify MyProduct     # Quality checks
-```
-
-**Workflow:**
-```
-audience → plan → review-plan → sitemap → voice → draft → edit → walkthrough → peer-review → incorporate → publish
-```
-
-| Command | Alias | Owner | Description | Example |
-|---------|-------|-------|-------------|---------|
-| help | h | — | Show command reference | /fci/docsmith help |
-| start | — | — | Begin full process | /fci/docsmith start MyProduct |
-| audience | aud | 👤 Human | Define audience & goals | /fci/docsmith aud PaymentAPI |
-| plan | pl | 🤖 AI | Create doc plan | /fci/docsmith plan PaymentAPI |
-| review-plan | rp | 👤 Human | Review gate | /fci/docsmith rp PaymentAPI |
-| sitemap | sm | 🤖 AI | Create structure | /fci/docsmith sm PaymentAPI |
-| voice | vc | 🤖 AI | UX content standards | /fci/docsmith vc PaymentAPI |
-| draft | dr | 🤖 AI | Write docs | /fci/docsmith draft PaymentAPI |
-| edit | ed | 🤖 AI | Self-review (5 passes) | /fci/docsmith ed PaymentAPI |
-| walkthrough | wt | 🤖 AI | Test on product | /fci/docsmith wt PaymentAPI |
-| validate | val | 🤖 AI | Re-run tests only | /fci/docsmith val PaymentAPI |
-| test | t | 🤖 AI | Create test cases | /fci/docsmith test PaymentAPI |
-| verify | vf | 🤖 AI | Run all checks | /fci/docsmith verify PaymentAPI |
-| peer-review | pr | 👤 Human | Peer review | /fci/docsmith pr PaymentAPI |
-| tech-review | tr | 👤 Human | Technical review | /fci/docsmith tr PaymentAPI |
-| incorporate | inc | 🤖 AI | Integrate feedback | /fci/docsmith inc PaymentAPI |
-| publish | pub | 👤 Human | Final approval | /fci/docsmith pub PaymentAPI |
-
-**Output Structure:**
-```
-docs/
-├── plan/           # audience-profile, doc-plan, traceability-matrix
-├── standards/      # voice-chart, ux-patterns, scorecard
-├── drafts/         # getting-started, tutorials, reference, api
-├── walkthrough/    # test-cases, test-execution
-└── images/         # walkthrough screenshots
-```
-
-**Templates:** Audience Profile, Documentation Plan, Traceability Matrix, Voice Chart, UX Text Patterns, UX Content Scorecard, Walkthrough Test Cases, Content Type Templates (Getting Started, Tutorials, How-To, Reference, API, Troubleshooting)
-
-📖 [Full Docsmith README](plugins/docsmith/README.md)
-
----
-
-## ☁️ Cloud Architect
-
-Design cloud architectures, migration plans, cost optimization across AWS/Azure/GCP.
-
-**Core Workflow:**
-```
-Discovery → Design → Security → Cost Model → Migration → Operate
-```
-
-**Reference Guides:** AWS Services, Azure Services, GCP Services, Multi-Cloud, Cost Optimization
-
-**Key Capabilities:**
-- 🏗️ Architecture design with HA (99.9%+)
-- 🔒 Zero-trust security (IAM, encryption)
-- 💰 Cost optimization (reserved, spot, right-sizing, FinOps)
-- 🔄 Migration planning (6Rs framework)
-- 📊 Monitoring & continuous optimization
-- 🛡️ Disaster recovery (RTO/RPO)
-
-📖 [Full Cloud Architect SKILL.md](plugins/cloud-architect/skills/cloud-architect/SKILL.md)
-
----
-
-## 🎨 Apply V2
-
-Migrate Material-UI v1 pages to the FCI Design System v2 using the runtime layout switching model.
-
-**Core Coverage:**
-```
-V2_READY_PAGES → useLayout() → PageWrapper → tables/forms/dialogs/tutorials
-```
-
-**Key Capabilities:**
-- 🔀 Dual-runtime V1/V2 migration model
-- 🧩 Versioned UI components via `useLayout().components`
-- 📋 Migration checklist + pitfalls
-- 📚 Page-type references for list/detail/form/dialog work
-
-📖 [Full Apply V2 README](plugins/apply-v2/README.md)
-
----
-
-## 📄 License
-
-MIT License
-
-## 👤 Author
-
-**BSS Team** — FPT Smart Cloud
+MIT
