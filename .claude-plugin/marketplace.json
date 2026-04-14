@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "bss-skills",
-  "description": "BSS Compute AI Skills - Internal tools for FPT Cloud BSS team",
+  "name": "fci-skills",
+  "description": "Shared skill repo for FCI teams",
   "owner": {
     "name": "NguyenAnhDuc",
     "email": "ducna01120@gmail.com"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "docsmith",
-      "description": "Structured documentation workflow based on PRC-010", 
+      "description": "Structured documentation workflow based on PRC-010",
       "author": {
         "name": "NguyenAnhDuc",
         "email": "ducna01120@gmail.com"

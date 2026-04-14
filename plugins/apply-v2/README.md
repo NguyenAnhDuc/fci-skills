@@ -1,6 +1,6 @@
 # Apply V2
 
-Use this skill when migrating an existing Material-UI (v1) page to the FCI Design System (v2) in the FPT Cloud console.
+Use this skill when migrating an existing Material-UI (v1) page to the FCI Design System (v2).
 
 The migration model assumes v1 and v2 coexist at runtime and rendering is controlled by `useLayout()` and `isApplyingV2`.
 
@@ -8,7 +8,7 @@ The migration model assumes v1 and v2 coexist at runtime and rendering is contro
 
 ```bash
 /plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
-/plugin install apply-v2@bss-skills
+/plugin install apply-v2@fci-skills
 /reload-plugins
 ```
 
