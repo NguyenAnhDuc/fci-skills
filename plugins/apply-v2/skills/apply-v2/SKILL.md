@@ -3,10 +3,6 @@ name: fci/apply-v2
 description: "Migrate an existing Material-UI (v1) page to the FCI Design System (v2). Both versions coexist at runtime. Use when the task involves apply v2, migrate to v2, convert to v2, useLayout, isApplyingV2, V2_READY_PAGES, PageWrapper, or MUI-to-FCI migration."
 ---
 
-## Description
-
-## Trigger
-
 ## How It Works
 
 ```
