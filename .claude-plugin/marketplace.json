@@ -18,16 +18,6 @@
       "category": "development"
     },
     {
-      "name": "cloud-architect",
-      "description": "Cloud architecture design, migration planning, cost optimization across AWS/Azure/GCP",
-      "author": {
-        "name": "Jeffallan (adapted by fpt-smartcloud)",
-        "email": "ducna01120@gmail.com"
-      },
-      "source": "./plugins/cloud-architect",
-      "category": "infrastructure"
-    },
-    {
       "name": "apply-v2",
       "description": "Migrate Material-UI v1 pages to the FCI Design System v2 using useLayout and isApplyingV2",
       "author": {
