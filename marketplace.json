@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "docsmith",
-      "description": "AI-driven documentation workflow (PRC-010) - Doc to code pipeline",
+      "description": "Structured documentation workflow based on PRC-010", 
       "author": {
         "name": "NguyenAnhDuc",
         "email": "ducna01120@gmail.com"
