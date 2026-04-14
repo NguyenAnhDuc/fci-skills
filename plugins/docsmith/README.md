@@ -7,7 +7,7 @@ Use it when you need to plan, draft, review, and verify product documentation in
 ## Install
 
 ```bash
-/plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
+/plugin marketplace add https://github.com/NguyenAnhDuc/fci-skills.git
 /plugin install docsmith@fci-skills
 /reload-plugins
 ```

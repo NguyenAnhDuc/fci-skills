@@ -7,7 +7,7 @@ The migration model assumes v1 and v2 coexist at runtime and rendering is contro
 ## Install
 
 ```bash
-/plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
+/plugin marketplace add https://github.com/NguyenAnhDuc/fci-skills.git
 /plugin install apply-v2@fci-skills
 /reload-plugins
 ```

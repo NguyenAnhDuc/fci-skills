@@ -12,7 +12,7 @@ Skills repo for FCI teams.
 ## Install
 
 ```bash
-claude plugin marketplace add https://github.com/NguyenAnhDuc/bss-skills.git
+claude plugin marketplace add https://github.com/NguyenAnhDuc/fci-skills.git
 claude plugin install docsmith@fci-skills
 claude plugin install apply-v2@fci-skills
 /reload-plugins
